@@ -16,13 +16,13 @@
         <a href="#features">Features</a>
        <a href="#testimonials">Reviews</a>
        <a href="#pricing">Pricing</a>
-       <a href="#" class="cta">Get Started</a>
+       <a href="#" id="getStartedBtn" class="cta">Get Started</a>
     </div>
     </div>
     <div class="hero">
       <h1>Welcome to PIntro</h1>
       <p>Your personal introduction generator.</p>
-      <a href="#" class="cta">Get Started</a>
+      <a href="#" id="getStartedBtn" class="cta">Get Started</a>
     </div>
 
   </div>
@@ -44,6 +44,7 @@
       <p>create intros in multiple languages.</p>
       </div>
       </div>
+      <button id="launchBot" class="cta">Create Your Intro</button>
   </section>
   <section id="testimonials">
     <h2>Reviews</h2>
@@ -78,6 +79,31 @@
     <p>Pro: $9.99/month</p>
     <p>Enterprise: Contact us for pricing</p>
   </section>
+  <!-- Intro Generator Modal -->
+<div id="introModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Create Your Intro</h2>
+    <form id="introForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="role">Your Role/Profession:</label>
+      <input type="text" id="role" required>
+
+      <label for="style">Style:</label>
+      <select id="style">
+        <option value="professional">Professional</option>
+        <option value="casual">Casual</option>
+        <option value="creative">Creative</option>
+      </select>
+
+      <button type="submit" class="cta">Generate Intro</button>
+    </form>
+    <div id="introOutput"></div>
+  </div>
+</div>
+<script src="script.js"></script>
 
 </body>
   </html>
